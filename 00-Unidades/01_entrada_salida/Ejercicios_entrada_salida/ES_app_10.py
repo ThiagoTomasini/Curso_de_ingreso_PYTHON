@@ -34,8 +34,11 @@ class App(customtkinter.CTk):
         self.btn_mostrar.grid(row=2, pady=20, padx=30, columnspan=2, sticky="nsew")
 
     def btn_mostrar_on_click(self):
-        pass
-
+        importe = self.txt_importe.get()
+        importe_int = int(importe)
+        resultado = importe_int * 0.80
+        mensaje = f"Importe actualizado: {resultado}"
+        alert(title="Resultado", message=mensaje)
 
 if __name__ == "__main__":
     app = App()

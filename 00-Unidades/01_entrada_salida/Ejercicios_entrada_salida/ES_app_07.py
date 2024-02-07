@@ -51,34 +51,34 @@ class App(customtkinter.CTk):
     def btn_sumar_on_click(self):
         txt_operador_a = self.txt_operador_a.get()
         txt_operador_b = self.txt_operador_b.get()
-        numero_1 = int(txt_operador_a)
-        numero_2 = int(txt_operador_b)
+        numero_1 = float(txt_operador_a)
+        numero_2 = float(txt_operador_b)
         suma = numero_1 + numero_2
-        alert(title="Resultado", message=suma)
+        alert("Resultado", f"El resultado de la suma es: {suma}")
 
     def btn_restar_on_click(self):
         txt_operador_a = self.txt_operador_a.get()
         txt_operador_b = self.txt_operador_b.get()
-        numero_1 = int(txt_operador_a)
-        numero_2 = int(txt_operador_b)
+        numero_1 = float(txt_operador_a)
+        numero_2 = float(txt_operador_b)
         resta = numero_1 - numero_2
-        alert(title="Resultado", message=resta)
+        alert("Resultado", f"El resultado de la resta es {resta}")
 
     def btn_multiplicar_on_click(self):
         txt_operador_a = self.txt_operador_a.get()
         txt_operador_b = self.txt_operador_b.get()
-        numero_1 = int(txt_operador_a)
-        numero_2 = int(txt_operador_b)
+        numero_1 = float(txt_operador_a)
+        numero_2 = float(txt_operador_b)
         multiplicar = numero_1 * numero_2
-        alert(title="Resultado", message=multiplicar)
+        alert("Resultado", f"El resultado de la multiplicacion es: {multiplicar}")
 
     def btn_dividir_on_click(self):
         txt_operador_a = self.txt_operador_a.get()
         txt_operador_b = self.txt_operador_b.get()
-        numero_1 = int(txt_operador_a)
-        numero_2 = int(txt_operador_b)
+        numero_1 = float(txt_operador_a)
+        numero_2 = float(txt_operador_b)
         division = numero_1 / numero_2
-        alert(title="Resultado", message=division)
+        alert("Resultado", f"El resultado de la division es: {division}")
         
 if __name__ == "__main__":
     app = App()
