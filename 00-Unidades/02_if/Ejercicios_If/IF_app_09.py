@@ -6,7 +6,7 @@ import customtkinter
 import random
 
 '''
-nombre:
+Thiago Tomasini
 apellido:
 ---
 Ejercicio: if_09

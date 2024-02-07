@@ -6,7 +6,7 @@ import customtkinter
 
 
 '''
-nombre:
+Thiago Tomasini
 apellido:
 ---
 Ejercicio: Match_05

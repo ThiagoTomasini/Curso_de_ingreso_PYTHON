@@ -5,7 +5,7 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
+Thiago Tomasini
 apellido:
 ---
 Ejercicio: entrada_salida_06
@@ -20,7 +20,7 @@ class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
         
-        self.title("UTN FRA")
+        self.title("UTN+ FRA")
 
         self.label1 = customtkinter.CTkLabel(master=self, text="Operador A")
         self.label1.grid(row=0, column=0, padx=20, pady=10)
@@ -43,7 +43,8 @@ class App(customtkinter.CTk):
         txt_operador_b = self.txt_operador_b.get()
         numero_1 = int(txt_operador_a)
         numero_2 = int(txt_operador_b)
-        alert(title="Resultado", message=numero_1 + numero_2)
+        suma = numero_1 + numero_2
+        alert(title="Resultado", message=suma)
      
         
 if __name__ == "__main__":

@@ -7,7 +7,7 @@ import random
 
 
 '''
-nombre:
+Thiago Tomasini
 apellido:
 ---
 Ejercicio: if_10
