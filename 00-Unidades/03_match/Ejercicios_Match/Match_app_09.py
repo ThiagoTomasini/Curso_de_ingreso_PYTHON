@@ -6,7 +6,7 @@ import customtkinter
 
 
 '''
-Thiago Tomasini
+nombre:
 apellido:
 ---
 Ejercicio: Match_09
@@ -57,8 +57,62 @@ class App(customtkinter.CTk):
         
     
     def btn_informar_on_click(self):
-        pass
-            
+        estaciones = self.combobox_estaciones.get()
+        destinos = self.combobox_destino.get()
+
+        precio_base = 15000
+        descuento = 0
+        aumento = 0
+        mensaje_de_descuento = 0
+        mensaje_de_aumento = 0
+
+        match(estaciones):
+            case "Invierno":
+                match(destinos):
+                    case "Bariloche":
+                        descuento = 0.20
+                        mensaje = precio_base - (precio_base * descuento)
+                    case "Cataratas" | "Cordoba":
+                        descuento = 0.10
+                        mensaje = precio_base - (precio_base * descuento)
+                    case "Mar del plata":
+                        descuento = 0.20
+                        mensaje = precio_base - (precio_base * descuento)
+
+            case "Verano":
+                match(destinos):
+                    case "Bariloche":
+                        descuento = 0.20
+                        mensaje = precio_base + (precio_base * aumento)
+                    case "Cataratas" | "Cordoba":
+                        aumento = 0.10
+                        mensaje = precio_base + (precio_base * aumento)
+                    case "Mar del plata":
+                        aumento =  0.20
+                        mensaje = precio_base + (precio_base * aumento)
+                        
+                    
+            case "Primavera" | "Otoño":
+                match(destinos):
+                    case "Bariloche":
+                        aumento = 0.10
+                        mensaje = precio_base + (precio_base * aumento)
+                    case "Cataratas":
+                        aumento = 0.10
+                        mensaje = precio_base + (precio_base * aumento)
+                    case "Mar del plata":
+                        aumento = 0.10
+                        mensaje = precio_base + (precio_base * aumento)
+        
+        valor_final = precio_base - (precio_base * descuento)
+        
+        aumento_total = precio_base + (precio_base * aumento)
+        
+
+        mensaje = f"Tu valor final es de {mensaje}"
+
+        alert("Precios", mensaje)
+        
     
 if __name__ == "__main__":
     app = App()

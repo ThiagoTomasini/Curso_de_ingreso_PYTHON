@@ -49,13 +49,13 @@ class App(customtkinter.CTk):
         toneladas = self.txt_toneladas.get()
         toneladas_float = float(toneladas)
         cuenta = (toneladas_float / 3.5) / 1000
-        cuenta_int = int(cuenta)
+        cuenta_int = float(cuenta)
         mensaje= f"La cantidad de camiones necesitados son: {cuenta_int}"
         alert(title="Resultado", message=mensaje)
 
     def btn_tiempo_llegada_on_click(self):
         kilometros = self.txt_kilometros.get()
-        kilometros_float = int(kilometros)
+        kilometros_float = float(kilometros)
         cuenta = (kilometros_float / 90)
         kilometros_fijo = round(cuenta,1)
         mensaje = f"La cantidad que van a recorrer es {kilometros_fijo}"
